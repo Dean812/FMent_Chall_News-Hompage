@@ -1,0 +1,62 @@
+/* from  Frontend Mentor */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* pre config  */
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*test*/
+.t1 {
+    border: 2px solid red;
+}
+
+.t2 {
+    border: 2px solid blue;
+}
+
+.t3 {
+    border: 2px solid green;
+}
+
+/* ======  code starting  ======  */
+
+/* Mobile's Version*/
+.img_desktop {
+    display: none;
+}
+
+body {
+    margin: 1rem;
+}
+
+nav>ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media (min-width: 600px) {
+
+    /* Desktop's Version*/
+    .img_mobile {
+        display: none;
+    }
+
+    .img_desktop {
+        display: block;
+    }
+}
