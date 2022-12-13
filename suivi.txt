@@ -1,0 +1,65 @@
+Mise en place
+
+le fichier contient deja image et texte
+et une balise style 
+
+> la balise style a été transformer en fichier .css
+
+une fois le modèle effectué
+
+Step1 : 
+remplissage du html via un modèle qui prévoit les balises .
+choix display > flexbox
+remise des marge et padding à 0
+insertion image et texte
+media query et mise en place du système d'image : 
+
+HTML: 
+
+<div>
+    <img src="../assets/images/image-web-3-mobile.jpg" alt="main_img_mobile" class="img_mobile">
+    <img src="../assets/images/image-web-3-desktop.jpg" alt="main_img_desktop" class="img_desktop">
+</div>
+
+CSS:
+
+/* Mobile's Version*/
+.img_desktop {
+    display: none;
+}
+@media (min-width: 600px) {
+
+    /* Desktop's Version*/
+    .img_mobile {
+        display: none;
+    }
+
+    .img_desktop {
+        display: block;
+    }
+}
+
+Gestion de la police : 
+
+version web : 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Italianno&display=swap" rel="stylesheet">
+
+css: 
+font-family: 'Inter', sans-serif;
+font-family: 'Italianno', cursive;
+
+le italoanno ne fonctionne pas, je me retrouve avec un écriture cursive !je garde le Inter
+mais tout n'est pas comme il faut , je pofinerais plus tard la typo
+
+Step 2 : header 
+
+enlever la liste a puce > ok 
+pour le menu horizontal , je suis parti sur un flex 
+wordspacing pour l'espace ?  je pense pas étant parti sur du flex // juste du margin-left
+flex pour centrer et coller a gauche 
+
+Bon, peut importe ce que je fais, ca ne veut pas , j'ai meme fait un flexbox, en dessous, 
+annuler avec un display block puis en dessous un autre display flex.
+
