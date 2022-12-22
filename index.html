@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Italianno&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Italianno&display=swap" rel="stylesheet">
   <title>Frontend Mentor | News homepage</title>
 </head>
 
@@ -24,13 +23,15 @@
         fill="#00001A" />
     </svg>
     <nav>
-      <ul>
+      <ul class="burger">
         <li><a href="#">Home</a></li>
         <li><a href="#">New</a></li>
         <li><a href="#">Popular</a></li>
         <li><a href="#">Trending</a></li>
         <li><a href="#">Categories</a></li>
       </ul>
+      <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg" id="open_menu"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
+      <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg" id="close_menu"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg>
     </nav>
   </header>
 
@@ -102,15 +103,30 @@
 
 
 
-  But is it really fulfilling its promise?
-
-
-
-
+  
   <div class="attribution">
+    But is it really fulfilling its promise?
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Dean812</a>.
   </div>
+  <script>
+    // gestion icone du burger menu 
+    let icone_open = document.getElementById('open_menu'); // icone burger
+    let icone_close = document.getElementById('close_menu'); // icone croix 
+    let block_nav = document.querySelector('.burger'); // test surface utilisé pour afficher le nav en mobile
+    icone_open.onclick = function() {
+      icone_open.style.display = 'none';
+      icone_close.style.display = 'block';
+      ///////////////////////
+      //block_nav.style.display = 'block';                     <<<<<<<<<<<<<<<<<<<<<<<<< gestion menu burger
+    
+    }
+    icone_close.onclick = function() {
+      icone_close.style.display = 'none';
+      icone_open.style.display = 'block';
+    }
+    // Gestion de l
+  </script>
 </body>
 
 </html>

@@ -3,13 +3,10 @@
     font-size: 11px;
     text-align: center;
 }
-
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-
 /* pre config  */
-
 * {
     box-sizing: border-box;
     outline: none;
@@ -17,24 +14,19 @@
     margin: 0px;
     padding: 0px;
 }
-
 body {
     margin: 1rem;
     font-family: 'Inter', sans-serif;
 }
-
 .img_desktop,
 .img_mobile {
     width: 100%;
 }
-
 p {
     font-size: 15px;
     color: hsl(233, 8%, 79%);
 }
-
 /* ======  code starting  ======  */
-
 /* Mobile's Version*/
 .img_desktop {   
     display: none;
@@ -60,6 +52,10 @@ li {
 header a {
     color: hsl(228, 45%, 44%);
 }
+ul {
+    display: none;
+}
+
 
 h1 {
     font-size: 3em; 
@@ -138,10 +134,20 @@ footer h3 {
     line-height: 25px;
 
 }
-
+/* --- Gestion menu burger  --- */
+#close_menu {
+    display: none;
+}
+/* take this one off */ 
+ul {
+    display : block;
+    position : absolute;
+    background-color: cornflowerblue;
+    top:9vh; right:0;
+    height: 100vh;
+}
 /* Desktop's Version*/
-@media (min-width: 530px) {
-
+@media (min-width: 900px) {
     /* gestion image mobile / desktop*/
     .img_mobile {
         display: none;
@@ -149,7 +155,13 @@ footer h3 {
     .img_desktop {
         display: block;
     }
-    /*gestion des hover- n'ont pas le même comportements en mobile*/
+    #open_menu, #close_menu {
+        display: none;
+    }
+    ul {
+        display: block;
+    }
+    /*hover*/
     header a:hover {
         color: rgb(241,93,81);
     } 
@@ -206,17 +218,4 @@ footer h3 {
     footer {
         display: flex;
     }
-
-    /*test*/
-.t1 {
-    border: 2px solid red;
-}
-
-.t2 {
-    border: 2px solid blue;
-}
-
-.t3 {
-    border: 2px solid lime;
-}
 }
